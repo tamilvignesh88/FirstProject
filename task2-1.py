@@ -1,0 +1,46 @@
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import Select
+import  time
+
+driver= webdriver.Chrome()
+driver.implicitly_wait(30)
+driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
+driver.find_element(By.NAME,'username').send_keys("Admin")
+driver.find_element(By.NAME,"password").send_keys("admin123")
+driver.find_element(By.XPATH,"(//button[normalize-space()='Login'])[1]").click()
+driver.find_element(By.XPATH,"(//span[normalize-space()='PIM'])[1]").click()
+driver.find_element(By.XPATH,"(//button[normalize-space()='Add'])[1]").click()
+driver.find_element(By.XPATH,"(//input[@placeholder='First Name'])[1]").send_keys("Logesh")
+#driver.find_element(By.XPATH,"(//input[@placeholder='Middle Name'])[1]").send_keys("ravi")
+driver.find_element(By.XPATH,"(//input[@placeholder='Last Name'])[1]").send_keys("raj")
+driver.find_element(By.XPATH,"(//span[@class='oxd-switch-input oxd-switch-input--active --label-right'])[1]").click()
+driver.find_element(By.XPATH,"(//input[@class='oxd-input oxd-input--active'])[3]").send_keys("Lofrae73")
+driver.find_element(By.XPATH,"(//input[@type='password'])[1]").send_keys("Test@123")
+driver.find_element(By.XPATH,"(//input[@type='password'])[2]").send_keys("Test@123")
+driver.find_element(By.XPATH,"(//button[normalize-space()='Save'])[1]").click()
+#driver.find_element(By.XPATH,"(//span[@class='oxd-switch-input oxd-switch-input--active --label-right'])[1]").click()
+#time.sleep(20)
+driver.find_element(By.XPATH,"(//a[normalize-space()='Personal Details'])[1]").click()
+driver.find_element(By.XPATH,"(//input[@class='oxd-input oxd-input--active'])[2]").send_keys("logu")
+driver.find_element(By.XPATH,"(//input[@class='oxd-input oxd-input--active'])[3]").send_keys("00S01")
+driver.find_element(By.XPATH,"(//input[@class='oxd-input oxd-input--active'])[4]").send_keys("driver001")
+driver.find_element(By.XPATH, "(//i[@class='oxd-icon bi-calendar oxd-date-input-icon'])[1]").click()
+driver.find_element(By.XPATH,"(//input[@class='oxd-input oxd-input--active'])[6]").send_keys("ns001")
+driver.find_element(By.XPATH,"(//input[@class='oxd-input oxd-input--active'])[7]").send_keys("nsis01")
+driver.find_element(By.XPATH,"(//span[@class='oxd-radio-input oxd-radio-input--active --label-right oxd-radio-input'])[1]").click()
+driver.find_element(By.XPATH,"(//input[@class='oxd-input oxd-input--active'])[10]").send_keys("NO")
+driver.find_element(By.XPATH,"(//button[@type='submit'][normalize-space()='Save'])[1]").click()
+driver.execute_script("window.scrollBy(0, -500);")
+driver.find_element(By.XPATH,"(//a[normalize-space()='Contact Details'])[1]").click()
+driver.find_element(By.XPATH,"(//input[@class='oxd-input oxd-input--active'])[2]").send_keys("cbe")
+driver.find_element(By.XPATH,"(//input[@class='oxd-input oxd-input--active'])[3]").send_keys("cbe2")
+driver.find_element(By.XPATH,"(//input[@class='oxd-input oxd-input--active'])[4]").send_keys("coimbatore")
+driver.find_element(By.XPATH,"(//input[@class='oxd-input oxd-input--active'])[5]").send_keys("Tamilnadu")
+driver.find_element(By.XPATH,"(//input[@class='oxd-input oxd-input--active'])[6]").send_keys("343343")
+driver.find_element(By.XPATH,"(//input[@class='oxd-input oxd-input--active'])[8]").send_keys("7904747322")
+driver.find_element(By.XPATH,"(//input[@class='oxd-input oxd-input--active'])[9]").send_keys("saisaq@gmail.com")
+driver.find_element(By.XPATH,"(//button[normalize-space()='Save'])[1]").click()
+
